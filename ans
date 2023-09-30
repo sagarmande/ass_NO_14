@@ -1,0 +1,74 @@
+Q1. An assignment operator like `+=` is not just for show; it serves a practical purpose. It is used to update the value of a variable by adding a specified value to it and then assigning the result back to the variable. This operation can lead to faster results at runtime when compared to writing the equivalent code with separate addition and assignment statements. It can be more efficient because it combines the addition and assignment in a single operation, potentially reducing the number of temporary variables and intermediate steps.
+
+Q2. In most programming languages, you would need two statements to replace the Python expression `a, b = a + b, a`. One statement to calculate the new values, and another statement to assign them to the variables. For example, in C++:
+
+```cpp
+int temp = a + b;
+a = temp;
+b = a;
+```
+
+Q3. In Python, the most effective way to set a list of 100 integers to 0 is to use a list comprehension:
+
+```python
+my_list = [0] * 100
+```
+
+This creates a list containing 100 zeros.
+
+Q4. To initialize a list of 99 integers that repeats the sequence 1, 2, 3, you can use a list comprehension like this:
+
+```python
+my_list = [i % 3 + 1 for i in range(99)]
+```
+
+This will create a list where the sequence 1, 2, 3 repeats 33 times.
+
+Q5. In IDLE or any Python environment, you can efficiently print a multidimensional list using a loop or list comprehension. For example:
+
+```python
+my_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+for row in my_list:
+    print(row)
+```
+
+This code will print each row of the multidimensional list on a separate line.
+
+Q6. Yes, you can use list comprehension with a string in Python. List comprehensions can be used to manipulate and transform strings just like lists. For example, you can create a list of characters from a string:
+
+```python
+my_string = "Hello, World!"
+char_list = [char for char in my_string]
+```
+
+This will create a list `char_list` containing each character of the string.
+
+Q7. From the command line, you can get support with a user-written Python program by using the `-h` or `--help` option. For example:
+
+```
+python my_program.py --help
+```
+
+To get help from within IDLE, you can use the `help()` function or the `dir()` function to explore the documentation and attributes of objects within your program.
+
+Q8. In Python, functions are first-class objects, which means you can:
+
+- Assign functions to variables.
+- Pass functions as arguments to other functions.
+- Return functions from other functions.
+- Store functions in data structures like lists or dictionaries.
+
+This level of flexibility is not typically found in languages like C or C++, where functions are not treated as first-class objects in the same way.
+
+Q9. In Python:
+
+- A **wrapper** is a function or class that adds some functionality to an existing object or function without modifying its source code.
+- A **wrapped feature** refers to the original object or function that the wrapper enhances or modifies.
+- A **decorator** is a specific type of wrapper that is used to modify the behavior of functions or methods by adding functionality before or after the wrapped function is called.
+
+Q10. A generator function in Python returns a generator object when called. It does not execute the function body immediately but instead returns a generator that can be used to lazily generate values one at a time using the `yield` keyword.
+
+Q11. To turn a regular function into a generator function in Python, you need to replace `return` statements with `yield` statements. The presence of the `yield` keyword indicates that the function is a generator and that it will yield values to the caller one at a time instead of returning a single result.
+
+Q12. One benefit of generators in Python is that they are memory-efficient for working with large data sets. Generators produce values lazily, so they don't store all the values in memory at once. This can significantly reduce memory usage compared to creating and storing large lists or sequences. Generators are particularly useful when dealing with large files, infinite sequences, or when you need to process data incrementally.
